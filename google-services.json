@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "753372682881",
+    "project_id": "boardexam-checker",
+    "storage_bucket": "boardexam-checker.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753372682881:android:826fd8458bb11a58d68b80",
+        "android_client_info": {
+          "package_name": "com.pbec.preboardexamchecker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "YOUR_API_KEY_HERE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:753372682881:android:d776e56b6890189fd68b80",
+        "android_client_info": {
+          "package_name": "com.tempo.tempo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "YOUR_API_KEY_HERE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,33 @@
+# Built artifacts
+bin/
+gen/
+out/
+build/
+.gradle/
+app/build/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+.navigation/
+externalNativeBuild/
+.cxx/
+captures/
+.externalNativeBuild/
+
+# Local configuration
+local.properties
+
+# Secrets
+*.jks
+*.keystore
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Misc
+*.csv
+*.xlsx

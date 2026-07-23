@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "267465077442",
+    "project_id": "preboardexamchecker",
+    "storage_bucket": "preboardexamchecker.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267465077442:android:669d887330827ad3d0415b",
+        "android_client_info": {
+          "package_name": "com.pbec.preboardexamchecker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "YOUR_API_KEY_HERE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

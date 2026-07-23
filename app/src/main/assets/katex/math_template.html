@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="katex.min.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background: white;
+            font-size: 10px;
+            line-height: 1.2;
+            overflow: visible;
+        }
+        .katex {
+            font-size: 8px !important;
+            vertical-align: middle;
+            display: inline-block;
+            margin: 0 0.5px;
+            padding: 0.5px;
+            white-space: nowrap;
+            max-height: 16px;
+            overflow: visible;
+        }
+        #latexOutput {
+            display: inline-block;
+            min-width: 10px;
+            min-height: 10px;
+            padding: 1px;
+        }
+        .katex-error {
+            color: black !important;
+            font-family: Helvetica, sans-serif !important;
+            font-size: 8px !important;
+        }
+    </style>
+</head>
+<body>
+<div id="latexOutput"></div>
+<script defer src="katex.min.js"></script>
+<script>
+    window.androidCallback = {
+        render: function(latex, displayMode) {
+            try {
+                const output = document.getElementById('latexOutput');
+                output.innerHTML = '';
+                katex.render(latex, output, {
+                    throwOnError: true,
+                    displayMode: displayMode,
+                    output: 'html',
+                    strict: false
+                });
+                output.style.display = 'none';
+                output.offsetHeight;
+                output.style.display = 'inline-block';
+                setTimeout(() => {
+                    const rect = output.getBoundingClientRect();
+                    const width = Math.max(rect.width, 10);
+                    const height = Math.max(rect.height, 10);
+                    console.log(`js-callback://renderComplete?width=${width}&height=${height}`);
+                }, 50);
+            } catch (e) {
+                console.error('KaTeX render error: ' + e.message);
+                console.log(`js-callback://renderError?message=${encodeURIComponent(e.message)}`);
+            }
+        }
+    };
+</script>
+</body>
+</html>
